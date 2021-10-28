@@ -4,6 +4,7 @@
 package secp256k1
 
 import (
+	"fmt"
 	"math/big"
 
 	secp256k1 "github.com/btcsuite/btcd/btcec"
@@ -64,6 +65,7 @@ func (pubKey *PubKey) VerifySignature(msg []byte, sigStr []byte) bool {
 			return false
 		}
 		// Use keccak256 hashing for (R,S) signature form
+		fmt.Println(sha3Hash(msg))
 		validSig := signature.Verify(sha3Hash(msg), pub)
 		return validSig
 	}

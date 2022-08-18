@@ -16,7 +16,11 @@ DOCKER_BUF := $(DOCKER) run --rm -v $(CURDIR):/workspace --workdir /workspace bu
 
 export GO111MODULE = on
 
+<<<<<<< HEAD
 # process build tags
+=======
+# process   build tags
+>>>>>>> d9488ba2e (test4 (#3))
 
 build_tags = netgo
 ifeq ($(LEDGER_ENABLED),true)
